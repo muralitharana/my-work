@@ -50,7 +50,7 @@ function App() {
             <Projects />
             <Wrapper>
               <Education />
-              <Contact />
+              {/* <Contact /> */}
             </Wrapper>
             <Footer />
           </div>
