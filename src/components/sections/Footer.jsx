@@ -6,6 +6,7 @@ import {
   Instagram,
   LinkedIn,
   Twitter,
+  Mail,
 } from "@mui/icons-material";
 
 const FooterContainer = styled.div`
@@ -93,17 +94,11 @@ const Footer = () => {
           <NavLink href="#Education">Education</NavLink>
         </Nav>
         <SocialMediaIcons>
-          <SocialMediaIcon href={Bio.facebook} target="display">
-            <FacebookRounded />
-          </SocialMediaIcon>
-          <SocialMediaIcon href={Bio.twitter} target="display">
-            <Twitter />
-          </SocialMediaIcon>
           <SocialMediaIcon href={Bio.linkedin} target="display">
             <LinkedIn />
           </SocialMediaIcon>
-          <SocialMediaIcon href={Bio.insta} target="display">
-            <Instagram />
+          <SocialMediaIcon href={Bio.mailLink} target="display">
+            <Mail />
           </SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>&copy; 2024 Muralitharan. All rights reserved.</Copyright>

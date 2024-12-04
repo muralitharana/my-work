@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
+import { Bio } from "../../data/constants";
 
 const Container = styled.div`
   display: flex;
@@ -105,25 +106,22 @@ const ContactButton = styled.input`
 `;
 
 const Contact = () => {
-  const form = useRef();
-  const handelSubmit = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_tox7kqs",
-        "template_nv7k7mj",
-        form.current,
-        "SybVGsYS52j2TfLbi"
-      )
-      .then(
-        (result) => {
-          alert("Message Sent");
-          form.current.result();
-        },
-        (error) => {
-          alert(error);
-        }
-      );
+  const [contantState, setContactState] = React.useState({
+    name: "",
+    subject: "",
+    message: "",
+  });
+  const handelSubmit = () => {
+    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${
+      Bio.mailId
+    }&su=${encodeURIComponent(
+      contantState.subject
+    )}&body=Hi, this is ${encodeURIComponent(
+      contantState.name
+    )} - ${encodeURIComponent(contantState.message)}`;
+
+    // Open the Gmail compose window in a new tab
+    window.open(mailtoLink, "_blank");
   };
   return (
     <Container id="Education">
@@ -136,13 +134,32 @@ const Contact = () => {
         >
           Feel free to reach out to me for any questions or opportunities!
         </Desc>
-        <ContactForm onSubmit={handelSubmit}>
+        <ContactForm>
           <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" name="message" rows={4} />
-          <ContactButton type="submit" value="Send" />
+
+          <ContactInput
+            placeholder="Your Name"
+            name="from_name"
+            onChange={(e) =>
+              setContactState((ps) => ({ ...ps, name: e.target.value }))
+            }
+          />
+          <ContactInput
+            placeholder="Subject"
+            name="subject"
+            onChange={(e) =>
+              setContactState((ps) => ({ ...ps, subject: e.target.value }))
+            }
+          />
+          <ContactInputMessage
+            placeholder="Message"
+            name="message"
+            rows={4}
+            onChange={(e) =>
+              setContactState((ps) => ({ ...ps, message: e.target.value }))
+            }
+          />
+          <ContactButton type="button" value="Send" onClick={handelSubmit} />
         </ContactForm>
       </Wrapper>
     </Container>

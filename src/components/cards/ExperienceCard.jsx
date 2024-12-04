@@ -9,8 +9,7 @@ const Top = styled.div`
   gap: 12px;
 `;
 const Image = styled.img`
-  height: 50px;
-  border-radius: 10px;
+  height: 40px;
   margin-top: 4px;
   @media only screen and (max-width: 768px) {
     height: 40px;
@@ -112,7 +111,7 @@ const ExperienceCard = ({ experience }) => {
       date={experience?.date}
     >
       <Top>
-        <Image src={experience?.img} />
+        <Image src={experience?.doc} />
         <Body>
           <Role>{experience?.role}</Role>
           <Company>{experience?.company}</Company>

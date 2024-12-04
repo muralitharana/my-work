@@ -73,17 +73,17 @@ const ButtonContainer = styled.div`
 `;
 
 const GithubButton = styled.a`
-  border: 1px solid ${({ theme }) => theme.primary};
+  border: 2px solid ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.primary};
   justify-content: center;
   display: flex;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 40px;
   cursor: pointer;
   padding: 10px 20px;
   font-size: 16px;
   font-weight: 500;
-  transition: all 0.6s ease-in-out;
+  transition: all 0.3s ease-in-out;
   text-decoration: none;
   &:hover {
     background: ${({ theme }) => theme.primary};
@@ -132,7 +132,7 @@ const Navbar = () => {
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo to="/">GeeksForGeeks</NavLogo>
+        <NavLogo to="/">My Work</NavLogo>
 
         <MobileIcon onClick={() => setIsOpen(!isOpen)}>
           <MenuRounded style={{ color: "inherit" }} />
