@@ -1,3 +1,6 @@
+import project1 from "../images/fms_dashboard.png"
+import project2 from "../images/mini-ats.png"
+
 export const Bio = {
   name: "Muralitharan",
   roles: [
@@ -9,7 +12,7 @@ export const Bio = {
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/muralitharana",
   resume:
-    "https://drive.google.com/file/d/1zbJMEWPlNBRG7PEaUwPJjkDED0KKlELe/view?usp=sharing",
+    "https://drive.google.com/file/d/13D_3QUFSQgOVxS3STKusiPr6z669yyy_/view?usp=drive_link",
   linkedin: "https://www.linkedin.com/in/muralitharan-a-a49805204",
   mailId:"muralitharan0002@gmail.com",
   mailLink:"https://mail.google.com/mail/?view=cm&fs=1&to=muralitharan0002@gmail.com&su=New opportunity&body=Hi Muralitharan"
@@ -146,7 +149,7 @@ export const experiences = [
     company: "Spritle Software Pvt Ltd",
     date: "Jan 2022 - Present",
     desc: `
-Over the past 2+ years, I've worked with one of the world's top airports, building optimized apps and managing the entire app distribution process. I focus on creating and maintaining features, integrating real-time experiences, and staying updated on emerging technologies. As a mentor, I guide new developers and contribute to team growth through hiring and training.
+Over the past 3+ years, I've worked with one of the world's top airports, building optimized apps and managing the entire app distribution process. I focus on creating and maintaining features, integrating real-time experiences, and staying updated on emerging technologies. As a mentor, I guide new developers and contribute to team growth through hiring and training.
     `,
     skills: [
       "JS",
@@ -174,15 +177,34 @@ export const education = [
 export const projects = [
   {
     id: 0,
-    title: "Features",
-    date: "Nov 2024 - Present",
+    title: "Fault Management System",
+    date: "Jan 2022 - Present",
     description:
-      "A React Native application which includes all common app features",
-    image:
-      "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
+      "A React Native application which used by World's best airport Staffs and Technicians.",
+    image:project1,
     tags: ["React Js", "React Native", "Redux"],
     category: "react native",
-    github: "https://github.com/muralitharana",
+    github: "https://play.google.com/store/apps/details?id=com.cag.fms.production&hl=en_IN",
+    webapp: "https://podstream.netlify.app/",
+    member: [
+      {
+        name: "Muralitharan A",
+        img: "https://avatars.githubusercontent.com/u/94091463?v=4",
+        linkedin: "https://www.linkedin.com/in/muralitharan-a-a49805204",
+        github: "https://github.com/muralitharana",
+      },
+    ],
+  },
+  {
+    id: 0,
+    title: "Asset Management System",
+    date: "Jan 2022 - Apr 2022",
+    description:
+      "A React Native application which used by Spritle for Asset mangement.",
+    image:project2,
+    tags: ["React Js", "React Native", "Redux"],
+    category: "react native",
+    github: "",
     webapp: "https://podstream.netlify.app/",
     member: [
       {

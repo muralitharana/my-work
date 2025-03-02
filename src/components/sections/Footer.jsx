@@ -101,7 +101,7 @@ const Footer = () => {
             <Mail />
           </SocialMediaIcon>
         </SocialMediaIcons>
-        <Copyright>&copy; 2024 Muralitharan. All rights reserved.</Copyright>
+        <Copyright>&copy; 2025 Muralitharan. All rights reserved.</Copyright>
       </FooterWrapper>
     </FooterContainer>
   );
